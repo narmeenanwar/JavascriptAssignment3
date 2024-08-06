@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Method</title>
+</head>
+<body>
+    <script>
+         document.write("<h1><center><u> Math Method </u></center></h1>"); 
+ 
+ ////...question:01...////
+ document.write("<h1>Question:01</h1>");  
+ //1. Write a program that takes a positive integer from user & display the following in your browser.                                                         a. number                                                                           b. round off value of the number                                                  c. floor value of the number                                                       d. ceil value of the number
+ var number = parseInt(prompt("Enter a positive integer:"));
+ document.write("Number: " + number + "<br>");
+ document.write("Floor value: " + Math.floor(number) + "<br>");
+ document.write("Rounded off value: " + Math.round(number) + "<br>");
+ 
+ document.write("Ceil value: " + Math.ceil(number) + "<br>");
+
+ 
+ 
+ ////...question:02...////
+ document.write("<h1>Question:02</h1>");  
+ //2. Write a program that takes a negative floating point number from user & display the following in your browser.                                            a. number                                                                           b. round off value of the number                                                  c. floor value of the number                                                      d. ceil value of the number
+ var number2 = parseFloat(prompt("Enter a negative floating point number:"));
+ document.write("Number: " + number2 + "<br>");
+ document.write("Floor value: " + Math.floor(number2) + "<br>");
+ document.write("Rounded off value: " + Math.round(number2) + "<br>");
+ 
+ document.write("Ceil value: " + Math.ceil(number2) + "<br>");
+
+ 
+ 
+ ////...question:03...////
+ document.write("<h1>Question:03</h1>");  
+ //3. Write a program that displays the absolute value of a number.         E.g. absolute value of -4 is 4 & absolute value of 5 is 5
+ var number = parseInt(prompt("Enter a number:"));
+ document.write("Absolute value: " + Math.abs(number) + "<br>");
+
+ 
+ 
+ ////...question:04...////
+ document.write("<h1>Question:04</h1>");  
+ //4. Write a program that simulates a dice using random() method of JS Math class. Display the value of dice in your browser.:
+ var diceValue = Math.floor(Math.random() * 6) + 1;
+ document.write("Dice value: " + diceValue + "<br>");
+
+ 
+ 
+ ////...question:05...////
+ document.write("<h1>Question:05</h1>");  
+ //5. Write a program that simulates a coin toss using random() method of JS Math class. Display the value of coin in your browser
+ var coinToss = Math.random();
+if (coinToss < 0.5) {
+  document.write("Heads");
+} else {
+  document.write("Tails");
+}
+var coinToss = Math.random();
+document.write(coinToss < 0.5 ? "Heads" : "Tails");
+ 
+ 
+ ////...question:06...////
+ document.write("<h1>Question:06</h1>");  
+ //6. Write a program that shows a random number between 1 and 100 in your browser.
+ var randomNumber = Math.floor(Math.random() * 100) + 1;
+ document.write("Random number between 1 and 100: " + randomNumber + "<br>");
+
+ 
+ 
+ ////...question:07...////
+ document.write("<h1>Question:07</h1>");  
+ //7. Write a program that asks the user about his weight. Parse the user input and display his weight in your browser.                            Possible user inputs can be:                                                                            a. 50                                                                               b. 50kgs                                                                            c. 50.2kgs                                                                         d. 50.2kilograms
+ var weight = prompt("Enter your weight:");
+ weight = weight.trim();
+ var weightNumber = parseFloat(weight);
+ if (isNaN(weightNumber)) {
+     document.write("Invalid input! Please enter a valid number.");
+ } else {
+     document.write("Your weight in kilograms: " + weightNumber + " kg");
+ }
+
+ 
+ 
+ ////...question:08...////
+ document.write("<h1>Question:08</h1>");  
+ //8. Write a program that stores a random secret number from 1 to 10 in a variable. Ask the user to input a number between 1 and 10. If the user input equals the secret number, congratulate the user.
+ var secretNumber = Math.floor(Math.random() * 10) + 1;
+ var userNumber = parseInt(prompt("Enter a number between 1 and 10:"));
+ if (userNumber === secretNumber) {
+     document.write("Congratulations! You guessed the correct number.");
+ } else {
+     document.write("Sorry, the correct number was " + secretNumber + ".");
+ }
+
+ 
+ 
+ 
+ 
+ </script>
+    
+</body>
+</html>
